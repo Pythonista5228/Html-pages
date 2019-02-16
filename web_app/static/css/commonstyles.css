@@ -1,0 +1,89 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+@import "./product-cards-component.css";
+
+img {
+  width: 100%;
+}
+
+#banner {
+  width: 100%;
+  height: 500px;
+  background: black;
+}
+
+#products-menu-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color:#3a3a3a;
+  position: relative;
+}
+
+.menu-heading::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  height: 2px;
+  width: 125px;
+  background: red; 
+}
+
+#product-categories-wrapper,
+.menu-heading {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0 0px 0px;
+  pointer-events: relative;
+}
+
+#product-categories-wrapper .categories {
+  list-style: none;
+  width: 100%;
+} 
+
+#product-categories-wrapper .categories li{
+  display: inline-block;
+  position: relative;
+  padding: 10px 20px;
+  margin: 2px;
+  border-radius: 3px;
+  background-color: #f1f1f1;
+  transition: all .5s ease-in-out;
+  font-size: 14px;
+  font-weight: 700;
+  color: #9f9f9f;
+  min-width: 100px;
+}
+
+.categories li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: red;
+  transition: all .5s ease-in-out; 
+}
+
+.categories li:hover::after {
+  width: 100%;
+}
+
+#product-categories-wrapper .categories li:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+#product-categories-wrapper .categories .active {
+  color: white;
+  background: #666 !important;
+  border-bottom: 2px solid red
+}
+
+  

@@ -1,0 +1,101 @@
+#products-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 40px 100px;
+  }
+
+.card-wrapper {
+  max-width: 245px;
+  padding: 10px;
+  position: relative;
+  min-height: 300px;
+  margin-bottom: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  transition: all .6s ease-in-out;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  border: .5px solid rgba(0, 0, 0, 0.1);
+  }
+
+.card-wrapper:hover {
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.3);    
+  cursor: pointer;   
+  }
+
+.product-card-whishlist:hover {
+  cursor: pointer;
+  color: red;
+  }
+
+.card-wrapper:hover .product-card-whishlist {
+  transition: all 1s;
+  animation: shake-heart 1s ease-in-out 2 alternate-reverse; 
+  }
+
+@keyframes shake-heart {
+  0% {
+    transform: rotate(-40deg);
+  }
+
+  50% {
+    transform: rotate(40deg);
+  }
+
+  100% {
+    transform: scale(2,3);
+    transform: rotate(0deg);
+  }
+}
+
+.card-heading {
+  display: inline-block;       
+  color: grey;
+}
+
+.product-title {
+  margin: 10px;
+}
+
+.product-card-description { 
+  position: relative;
+  color: #3a3a3a;
+  font-size: 1em;
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 15px;
+  text-align: center;
+  padding: 10px;
+}
+
+.product-card-description::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  left: 0%;
+  top: 0%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: #F7F7F7;
+  z-index: -1;
+}
+
+.product-card-rating {
+  color: gold;
+  float: right;
+  padding-right: 4px; 
+}
+
+.product-card-whishlist {
+  color: rgba(10, 50, 10, .3);
+  position: absolute;
+  right: 10px;
+  font-size: 20px;
+  top: 10px;      
+}
+
+@media only screen and ( max-width: 1280px ) {
+  #products-wrapper{
+      padding: 40px 0;
+  }
+}

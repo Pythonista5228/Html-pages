@@ -1,0 +1,18 @@
+{% extends "_base.html" %}
+
+{% block pagehead %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+{% endblock %}
+
+{% block page_content %}
+   <section id="">
+     {% for product in product %}
+     <p>{{product}}</p>
+     {% endfor %}
+   </section>
+    </hr>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}

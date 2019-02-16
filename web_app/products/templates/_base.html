@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}The Great Django Blog{% endblock %}</title>
+  <link rel="stylesheet" type="text/css" href="/static/css/common.css">
+  {% block pagehead %}
+    <!-- To include css,js or to link something in head -->
+  {% endblock %}
+</head>
+<body>
+    {% block page_content %}
+    {% endblock %}
+
+    {% block footer %}
+    {% endblock %}
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
